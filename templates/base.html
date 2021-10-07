@@ -14,12 +14,16 @@
   <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
   <style type="text/css">
+    *{
+        margin: 0;
+     }
     html,
     body,
     header,
     .carousel {
       height: 60vh;
     }
+    .main{min-height: calc(100vh - 120px);}
 
     @media (max-width: 740px) {
 
