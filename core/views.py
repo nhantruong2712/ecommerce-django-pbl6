@@ -216,6 +216,11 @@ class PaymentView(View):
                 'STRIPE_PUBLIC_KEY' : settings.STRIPE_PUBLIC_KEY
             }
             userprofile = self.request.user.userprofile
+            try:
+                customer = stripe.Customer.retrieve(userprofile.stripe_customer_id)
+            except:
+                stripe.Customer.create(id=userprofile.stripe_customer_id)
+
             if userprofile.one_click_purchasing:
                 # fetch the users card list
                 cards = stripe.Customer.list_sources(

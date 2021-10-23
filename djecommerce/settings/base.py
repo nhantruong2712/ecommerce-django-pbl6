@@ -20,8 +20,12 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'django_countries',
+    'core',
 
-    'core'
+    # SECURE
+    'axes',
+    'blacklist',
+    'django_agent_trust',
 ]
 
 MIDDLEWARE = [
@@ -32,6 +36,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware',
+    'blacklist.middleware.BlacklistMiddleware',
+    'django_agent_trust.middleware.AgentMiddleware',
 ]
 
 ROOT_URLCONF = 'djecommerce.urls'
@@ -47,15 +54,17 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_agent_trust.context_processors.agent',
             ],
         },
     },
 ]
 
+
 WSGI_APPLICATION = 'djecommerce.wsgi.application'
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -71,8 +80,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 # Auth
 
 AUTHENTICATION_BACKENDS = (
+    'axes.backends.AxesBackend',
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend'
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -88,15 +98,12 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'nhandzblog@gmail.com'
 EMAIL_HOST_PASSWORD = 'nhandzok1'
-# MAILER_EMAIL_BACKEND = EMAIL_BACKEND
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'nhandzblog@gmail.com'
-# EMAIL_HOST_PASSWORD = 'nhandzok1'
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
+BANISH_ENABLED = True
+BANISH_EMPTY_UA = True
+BLACKLIST_RELOAD_PERIOD = 1
+AXES_FAILURE_LIMIT = 10
