@@ -26,22 +26,18 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+              {% for cate in cate_menu %}
             <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
+              <a class="nav-link" href="#">{{ cate }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
-            </li>
+              {% endfor %}
 
           </ul>
           <!-- Links -->
 
-          <form class="form-inline">
+          <form class="form-inline" action="{% url 'core:product_search' %}">
             <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search" aria-label="Search">
             </div>
           </form>
         </div>

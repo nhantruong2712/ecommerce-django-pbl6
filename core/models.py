@@ -12,6 +12,12 @@ CATEGORY_CHOICES = (
     ('OW', 'Outwear')
 )
 
+STATUS_CHOICES = (
+    ('N', 'New'),
+    ('S', 'Sale'),
+    ('H', 'HOT')
+)
+
 LABEL_CHOICES = (
     ('P', 'primary'),
     ('S', 'secondary'),
@@ -26,9 +32,13 @@ ADDRESS_CHOICES = (
 
 class Category(models.Model):
     name = models.CharField(max_length=225)
+    slug = models.SlugField(default='')
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):  # to view on site
+        return self.slug
 
 
 class UserProfile(models.Model):
@@ -46,9 +56,11 @@ class Item(models.Model):
     price = models.FloatField()
     discount_price = models.FloatField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=1, null=True)
     label = models.CharField(choices=LABEL_CHOICES, max_length=1)
     slug = models.SlugField()
     description = models.TextField()
+    note = models.TextField(null=True)
     image = models.ImageField()
 
     def __str__(self):
