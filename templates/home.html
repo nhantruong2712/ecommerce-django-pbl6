@@ -22,13 +22,13 @@
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">All
+              <a class="nav-link" href="{% url 'core:home' %}">All
                 <span class="sr-only">(current)</span>
               </a>
             </li>
               {% for cate in cate_menu %}
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ cate }}</a>
+              <a class="nav-link" href="{% url 'core:category' cate|slugify %}">{{ cate }}</a>
             </li>
               {% endfor %}
 
@@ -71,7 +71,7 @@
                 <h5>
                   <strong>
                     <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
-                      <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span>
+                      <span class="badge badge-pill {{ item.get_label_display }}-color">{{ item.get_status_display }}</span>
                     </a>
                   </strong>
                 </h5>

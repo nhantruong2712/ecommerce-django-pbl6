@@ -534,5 +534,13 @@ def product_search(request):
     query = request.GET.get('search')  # name input = 'search'
     if query:
         items = Item.objects.filter(title__icontains=query)
-        context = {'object_list': items}
+        cate_menu = Category.objects.all()
+        context = {'object_list': items, 'cate_menu': cate_menu}
+    return render(request, 'home.html', context)
+
+
+def category(request, slug):
+    categories = Item.objects.filter(category__slug=slug)
+    cate_menu = Category.objects.all()
+    context = {'object_list': categories, 'cate_menu': cate_menu}
     return render(request, 'home.html', context)

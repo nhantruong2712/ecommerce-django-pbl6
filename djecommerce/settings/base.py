@@ -22,10 +22,16 @@ INSTALLED_APPS = [
     'django_countries',
     'core',
 
+    # Chat
+    'django_private_chat',
+    'django_private_chat2.apps.DjangoPrivateChat2Config',
+    'channels',
+
     # SECURE
     'axes',
     'blacklist',
     'django_agent_trust',
+
 ]
 
 MIDDLEWARE = [
@@ -108,3 +114,21 @@ BANISH_EMPTY_UA = True
 BLACKLIST_RELOAD_PERIOD = 1
 AXES_FAILURE_LIMIT = 10
 BLACKLIST_TEMPLATE = "errorblack.html"
+
+
+# Chat
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('localhost', 6379)],
+        },
+        'ROUTING': 'example_channels.routing.channel_routing',
+    }
+}
+ASGI_APPLICATION = "djecommerce.asgi.application"
+
+CHAT_WS_SERVER_HOST = 'localhost'
+CHAT_WS_SERVER_PORT = 5002
+CHAT_WS_SERVER_PROTOCOL = 'ws'

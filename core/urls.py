@@ -10,7 +10,7 @@ from .views import (
     PaymentView,
     AddCouponView,
     RequestRefundView,
-    product_search
+    product_search, category
 )
 
 app_name = 'core'
