@@ -120,7 +120,7 @@ BLACKLIST_TEMPLATE = "errorblack.html"
 
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
             'hosts': [('localhost', 6379)],
         },
@@ -132,3 +132,5 @@ ASGI_APPLICATION = "djecommerce.asgi.application"
 CHAT_WS_SERVER_HOST = 'localhost'
 CHAT_WS_SERVER_PORT = 5002
 CHAT_WS_SERVER_PROTOCOL = 'ws'
+
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
