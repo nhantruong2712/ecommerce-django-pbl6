@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a77dcc-6863-4bb8-9f4f-0e80d48bba60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +193,11 @@
       <workItem from="1636261121305" duration="621000" />
       <workItem from="1636269899509" duration="64000" />
       <workItem from="1636379104655" duration="7195000" />
-      <workItem from="1636390542382" duration="1395000" />
+      <workItem from="1636390542382" duration="1642000" />
+      <workItem from="1636474170457" duration="12000" />
+      <workItem from="1636769994459" duration="802000" />
+      <workItem from="1636774307128" duration="25000" />
+      <workItem from="1637240770112" duration="1451000" />
     </task>
     <servers />
   </component>
