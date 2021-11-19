@@ -4,6 +4,7 @@
     <list default="true" id="c4a77dcc-6863-4bb8-9f4f-0e80d48bba60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +199,7 @@
       <workItem from="1636774307128" duration="25000" />
       <workItem from="1637240770112" duration="6891000" />
       <workItem from="1637287815584" duration="65000" />
+      <workItem from="1637327889402" duration="1082000" />
     </task>
     <servers />
   </component>
