@@ -3,6 +3,7 @@ import os
 import sys
 
 if __name__ == '__main__':
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djecommerce.settings.base")
     if sys.platform == 'win32' and sys.version_info >= (3, 8):
         import asyncio
 
