@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a77dcc-6863-4bb8-9f4f-0e80d48bba60" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jean/1625670982-whistles-authentic-barrel-leg-jean-light-wash-99-1625670949.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jean/1bj20w005-sj592-110-.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jean/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/shoes/ultraboost-21-shoes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/shoes/yeezy-boost-380.jpg" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
+>>>>>>> bafd10a8e639a852cf35765061a9b7ba54c15958
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +207,7 @@
       <workItem from="1636774307128" duration="25000" />
       <workItem from="1637240770112" duration="6891000" />
       <workItem from="1637287815584" duration="65000" />
-      <workItem from="1637327889402" duration="1082000" />
+      <workItem from="1637327889402" duration="5133000" />
     </task>
     <servers />
   </component>
@@ -255,7 +263,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/django_ecommerce$manage.coverage" NAME="manage Coverage Results" MODIFIED="1636172486220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/django_ecommerce$manage.coverage" NAME="manage Coverage Results" MODIFIED="1637344298616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md" />
