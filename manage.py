@@ -7,7 +7,7 @@ if __name__ == '__main__':
         import asyncio
 
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djecommerce.settings.development')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djecommerce.settings.base')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
