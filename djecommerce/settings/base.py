@@ -75,13 +75,15 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+DEBUG = True
+
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Auth
 
@@ -105,7 +107,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'nhandzblog@gmail.com'
 EMAIL_HOST_PASSWORD = 'nhandzok1'
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.3']
+ALLOWED_HOSTS = ['*']
 
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
