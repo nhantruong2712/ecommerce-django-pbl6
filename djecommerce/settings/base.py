@@ -77,13 +77,15 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+DEBUG = True
+
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Auth
 
@@ -106,6 +108,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'nhandzblog@gmail.com'
 EMAIL_HOST_PASSWORD = 'nhandzok1'
+
 
 DEBUG = True
 
