@@ -6,7 +6,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(
 
 SECRET_KEY = config('SECRET_KEY')
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.9']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.9', 'pbl6ecommerce.pagekite.me', 'www.pbl6ecommerce.pagekite.me',
+                 'https://pbl6ecommerce.pagekite.me']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
