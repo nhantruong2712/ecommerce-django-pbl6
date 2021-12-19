@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_countries',
     'core',
+    'social_django',
 
     # Chat
     'django_private_chat',
@@ -63,6 +64,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django_agent_trust.context_processors.agent',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -91,8 +94,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
+    'social_core.backends.open_id.OpenIdAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.github.GithubOAuth2',
 )
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -146,3 +154,26 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
+
+# Social Login
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '867006737479712'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'dedb3bf86f47c1c7fc77da805521c690'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '415159135672-jjes9ut2ugtpa02j362pi0nlk6t15h0g.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'yYtQUTtjuj96DhhcjxoVA3-o'
+
+SOCIAL_AUTH_GITHUB_KEY = 'Iv1.02c549f0ede2329d'
+SOCIAL_AUTH_GITHUB_SECRET = 'e3f19a2bf035cdb9203af60d521d8d6469f266d8'
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]

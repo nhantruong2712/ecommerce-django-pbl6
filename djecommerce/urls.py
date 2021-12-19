@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('core.urls', namespace='core')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
     path('chat/', include(django_private_chat2_urls)),
     path('chat1/', include(django_private_chat_urls)),
 
