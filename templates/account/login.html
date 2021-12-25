@@ -46,22 +46,22 @@
 
             <a class="btn btn-default" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
             <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
-          <span style="display: flex; justify-content: center; font-weight: bold">
-              Or
-            </span>
-          <br/>
-          <div style="display: flex; justify-content: center;">
-              <a href="{% url 'social:begin' 'facebook' %}" class="login100-social-item bg1">
-                <i class="fa-brands fa-facebook" style="font-size: 50px; margin-right: 10px"></i>
-            </a>
-
-            <a href="{% url 'social:begin' 'github' %}" class="login100-social-item bg2">
-                <i class="fa-brands fa-github" style="font-size: 50px; margin-right: 10px"></i>
-            </a>
-            <!--{% url 'social:begin' 'google-oauth2' %}-->
-            <a href="{% url 'social:begin' 'google-oauth2' %}" class="login100-social-item bg3">
-                <i class="fa-brands fa-google" style="font-size: 50px"></i>
-            </a>
+{#          <span style="display: flex; justify-content: center; font-weight: bold">#}
+{#              Or#}
+{#            </span>#}
+{#          <br/>#}
+{#          <div style="display: flex; justify-content: center;">#}
+{#              <a href="{% url 'social:begin' 'facebook' %}" class="login100-social-item bg1">#}
+{#                <i class="fa-brands fa-facebook" style="font-size: 50px; margin-right: 10px"></i>#}
+{#            </a>#}
+{##}
+{#            <a href="{% url 'social:begin' 'github' %}" class="login100-social-item bg2">#}
+{#                <i class="fa-brands fa-github" style="font-size: 50px; margin-right: 10px"></i>#}
+{#            </a>#}
+{#            <!--{% url 'social:begin' 'google-oauth2' %}-->#}
+{#            <a href="{% url 'social:begin' 'google-oauth2' %}" class="login100-social-item bg3">#}
+{#                <i class="fa-brands fa-google" style="font-size: 50px"></i>#}
+{#            </a>#}
           </div>
 
 
