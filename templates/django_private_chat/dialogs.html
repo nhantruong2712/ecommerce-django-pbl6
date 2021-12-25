@@ -25,7 +25,7 @@
                             <div class="row {% if msg.read %}msg-read{% else %}msg-unread{% endif %}"
                                  data-id="{{ msg.id }}">
                                 <p class="{% if msg.sender == request.user %}pull-left{% else %}pull-right{% endif %}">
-                                    <span class="username">{{ msg.sender.username }}:</span>
+                                    <span class="username" style="color: black">{{ msg.sender.username }}:</span>
                                     {{ msg.text }}
                                     <span class="timestamp">&ndash; <span
                                             data-livestamp="{{ msg.get_formatted_create_datetime }}">{{ msg.get_formatted_create_datetime }}</span></span>
